@@ -36,7 +36,12 @@ describe 'tokenizer', ->
 
   describe 'splitWords', ->
 
-    it 'splits words, ignoring standard punctuation marks', ->
-      input = 'these, are some; words'
+    it 'splits words', ->
+      input = 'first sentence. second sentence.'
+      words = lib.splitWords input
+      words.should.have.length 4
+
+    it 'ignores characters that could be around a word', ->
+      input = '(second) sentence, really. "complicated"'
       words = lib.splitWords input
       words.should.have.length 4

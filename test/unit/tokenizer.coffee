@@ -1,12 +1,8 @@
 should = require 'should'
 
-describe 'testing', ->
-
-  it 'works', -> (42).should.equal 42
-
 describe 'tokenizer', ->
 
-  lib = require('../lib/tokenizer')
+  lib = require('../../lib/tokenizer')
 
   it 'could be required', ->
     should.exist lib
@@ -32,6 +28,11 @@ describe 'tokenizer', ->
       input = 'did you know shinigami love apples? not really.'
       sentences = lib.splitSentences input
       sentences.should.have.length 2
+
+    it 'is not fooled by e.g.', ->
+      input = 'not fooled, e.g. correctly parses.'
+      sentences = lib.splitSentences input
+      sentences.should.have.length 1
 
   describe 'splitWords', ->
 

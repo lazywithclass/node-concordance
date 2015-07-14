@@ -45,3 +45,8 @@ describe 'tokenizer', ->
       input = '(second) sentence, really. "complicated"'
       words = lib.splitWords input
       words.should.have.length 4
+
+    it 'is case insensitive', ->
+      input = 'A a is a a'
+      words = lib.splitWords input
+      words.should.eql [ 'a', 'a', 'is', 'a', 'a']

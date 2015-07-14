@@ -50,3 +50,13 @@ describe 'tokenizer', ->
       input = 'A a is a a'
       words = lib.splitWords input
       words.should.eql [ 'a', 'a', 'is', 'a', 'a']
+
+    it 'understands e.g. as a word', ->
+      input = 'e.g. means that is'
+      words = lib.splitWords input
+      words[0].should.eql 'e.g.'
+
+    it 'understands words with a - in them', ->
+      input = 'zero-indexed was not fair'
+      words = lib.splitWords input
+      words[0].should.eql 'zero-indexed'

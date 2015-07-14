@@ -10,13 +10,13 @@ describe 'concordance', ->
   describe 'parse', ->
 
     it 'gives the total occurences', ->
-      input = 'a simple test. what a test.'
+      input = 'a simple a test. what a test.'
       parsed = concordance.parse input
       expected = [{
         word: 'a'
         occurrences:
-          total: 2
-          positions: [1, 1]
+          total: 3
+          positions: [2, 1]
       }, {
         word: 'simple'
         occurrences:

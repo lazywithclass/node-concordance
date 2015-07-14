@@ -12,13 +12,16 @@ zero-indexed sentence number in which that word occurs. You may assume that the 
 contains only spaces, newlines, standard English letters, and standard English punctuation
 marks.
 
+## Dependencies
+
+Just run `npm install`, tested with node v0.10.33
+
 ## Using it
 
-
+You could run it by calling `cat test/fixtures/base | node index.js`
 
 ## Running tests
 
-To run tests `make test`, node is passed the flag `--stack_trace_limit 10`, so that
-stack traces are at most 10 lines long.
+To run tests the usual `npm test` or `make test`.
 
 To run testem so that tests run on file change either run `npm run dev` or `make -s`

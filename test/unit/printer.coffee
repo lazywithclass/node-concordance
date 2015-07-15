@@ -51,5 +51,3 @@ describe 'printer', ->
       console.log.args[0][0].should.equal 'a {1:1}'
       console.log.args[1][0].should.equal 'b {1:1}'
       console.log.args[2][0].should.equal 'c {2:2}'
-
-    it 'does not print trailing zeros', ->

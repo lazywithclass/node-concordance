@@ -33,6 +33,7 @@ describe 'tokenizer', ->
       input = 'not fooled, e.g. correctly parses.'
       sentences = lib.splitSentences input
       sentences.should.have.length 1
+      sentences[0].should.equal 'not fooled, e.g. correctly parses'
 
   describe 'splitWords', ->
 

@@ -24,4 +24,6 @@ You could run it by calling `cat test/fixtures/base | node index.js`
 
 To run tests the usual `npm test` or `make test`.
 
+To check that the produced output is the same as the one from the spec you could run `diff <(cat test/fixtures/base| node index.js) <(cat test/fixtures/base.expected)`.
+
 To run testem so that tests run on file change either run `npm run dev` or `make -s`
